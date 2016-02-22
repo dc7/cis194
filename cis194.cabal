@@ -1,0 +1,22 @@
+name:                   cis194
+version:                0.1.0.0
+synopsis:               Solutions for Brent Yorgey's CIS 194: Introduction to Haskell (Spring 2013)
+homepage:               http://www.cis.upenn.edu/~cis194/spring13/
+author:                 Daniel Comisar
+maintainer:             daniel.comisar@gmail.com
+build-type:             Simple
+cabal-version:          >=1.10
+
+library
+    build-depends:      base >=4.6 && <4.7, containers
+    default-language:   Haskell2010
+    exposed-modules:    Calc, ExprT, Fibonacci, Golf, Homework1, Homework4, Log, LogAnalysis, Parser, StackVM, VarExprT
+    hs-source-dirs:     week01, week02, week03, week04, week05, week06
+
+test-suite tests
+    build-depends:      base,
+                        cis194,
+                        hspec >= 1.8
+    default-language:   Haskell2010
+    main-is:            HSpecTests.hs
+    type:               exitcode-stdio-1.0
